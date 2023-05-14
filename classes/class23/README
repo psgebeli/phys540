@@ -1,0 +1,61 @@
+Sticky Tetris
+=============
+
+Kinetic growth model with Kardar-Parisi-Zhang (KPZ) critical behaviour
+
+#1
+      X <-- dropped at random position i in {1, 2, ..., N-2}
+      |
+      |
+      |
+      .
+      X
+OOOOOOOOOOOOOOOOOOO
+^^^   ^           ^
+012   i=6         N-1
+
+[ [0], [0], [0], [0], [0], [0], [0, 1], [0], ... ] 
+
+
+#2
+             X
+             |
+             |
+             |
+             .
+      O      X
+OOOOOOOOOOOOOOOOOOO
+
+
+
+#n
+       X 
+       |
+       .
+      OX
+     OO      O  OO
+      O  O   O   O
+OOOOOOOOOOOOOOOOOOO
+
+[ [0], [0], [0], [0], [0], [0, 2], [0, 1, 2, 3], [0, 3], ... ] 
+
+#(n+1)
+              X 
+              |
+              |
+      OO      .
+     OO      OX OO
+      O  O   O   O
+OOOOOOOOOOOOOOOOOOO
+
+
+
+#(n+2)
+    X
+    |
+    |
+    . OO
+    XOO      OO OO
+      O  O   O   O
+OOOOOOOOOOOOOOOOOOO
+

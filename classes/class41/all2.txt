@@ -1,0 +1,6 @@
+Single capacitor:
+60  (x1)
+Up to 2 capacitors:
+30  (x2)
+60  (x1)
+120  (x2)

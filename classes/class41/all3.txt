@@ -1,0 +1,10 @@
+Single capacitor:
+60  (x1)
+Up to 3 capacitors:
+20  (x3)
+30  (x2)
+40  (x3)
+60  (x1)
+90  (x3)
+120  (x2)
+180  (x3)

@@ -1,0 +1,136 @@
+Counting capacitors
+https://projecteuler.net/problem=155
+
+Base case, single capacitor C.
+
+C
+--||--
+
+Next, place one additional capacitor in series or in parallel.
+
+Let's use reverse Polish notation:
+ABo implies A and B arranged according to the operation o (=s or p)
+
+CCs
+--||----||--
+  
+
+CCp
+   +-||-+
+   |    |  
+  -+    +-
+   |    |
+   +-||-+
+   
+Build off the previous two-capacitor case.
+
+[CCs]Cs = CCCs
+--||----||----||--
+
+[CCs]Cp
+ +--||----||--+
+ |            |
+-+            +-
+ |            |
+ +-----||-----+
+ 
+[CCp]Cs
+   +-||-+
+   |    |  
+  -+    +---||--
+   |    |
+   +-||-+
+   
+[CCp]Cp
+    +-||-+
+    |    |  
+ +--+    +--+
+ |  |    |  |
+-+  +-||-+  +-
+ |          |
+ +----||----+
+
+Build off the previous two- and three- capacitor cases:
+
+3+1
+
+[CCCs]Cs = C[CCCs]s = CCCCs
+--||----||----||----||--
+
+
+[[CCs]Cp]Cs
+ +--||----||--+
+ |            |
+-+            +---||--
+ |            |
+ +-----||-----+
+or
+C[[CCs]Cp]s
+       +--||----||--+
+       |            |
+--||---+            +-
+       |            |
+       +-----||-----+
+
+[[CCp]Cp]Cs
+    +-||-+
+    |    |  
+ +--+    +--+
+ |  |    |  |
+-+  +-||-+  +---||--
+ |          |
+ +----||----+
+or
+C[[CCp]Cp]s
+          +-||-+
+          |    |  
+       +--+    +--+
+       |  |    |  |
+--||---+  +-||-+  +-
+       |          |
+       +----||----+
+
+[CCCs]Cp
+ +--||----||----||--+
+ |                  |
+-+                  +-
+ |                  |
+ +--------||--------+
+
+[[CCs]Cp]Cp
+    +--||----||--+
+    |            |
+ +--+            +--+
+ |  |            |  |
+-+  +-----||-----+  +-
+ |                  |
+ +---------||-------+
+
+...
+ 
+2+2
+
+[CCs][CCs]s = CCCCs
+--||----||----||----||-- (duplicate!)
+
+[CCp][CCs]s
+   +-||-+
+   |    |  
+  -+    +--||----||--
+   |    |
+   +-||-+
+    
+...
+
+[CCp][CCp]p
+    +-||-+
+    |    |  
+ +--+    +--+
+ |  |    |  |
+ |  +-||-+  |
+-+          |
+ |  +-||-+  |
+ |  |    |  |
+ |+-+    +--+
+    |    |
+    +-||-+   

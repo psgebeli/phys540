@@ -1,0 +1,17 @@
+it is clear that the descending summation holds better precision for
+high N, since the ascending summation tapers off at 15.4037, while the
+descending some continues.
+
+This is (probably) because in the descending summation, you start with
+smaller terms (1/10mil) compared to 1/10. Starting smaller is always
+better, because starting bigger can lead to float-rounding errors.
+
+For example, a=1000, b = c = 14
+
+a + b = 1014 --> 1010
+(a+b)+c = 1010+14 = 1024 --> 1020
+
+but b+c = 28
+a + (b+c) = 1000 + 28 = 1028 --> 1030
+
+so starting smaller leads to better precision.

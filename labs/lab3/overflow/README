@@ -1,0 +1,9 @@
+This is pretty easy to convince myself of. Assuming that column1 is
+float, 2 is double, and 3 is long double, it is easily seen by piping
+the results of ./max into a data file and using more to scroll. the
+first column starts spitting out infinity at 10^38, 2nd at 10^308, and
+3rd at 10^4932, implying that those are the largest finite values for
+the respective types.
+
+There is no assignment for this part, right? Just convincing ourselves
+of that fact? [ksdb: Correct]
